@@ -1,0 +1,27 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build ROM",
+            "type": "shell",
+            "command": "..\\..\\..\\gb\\resources\\gbdk-win64 (1)\\gbdk\\bin\\lcc",
+            "args": [
+                "-o", "game.gb", "main.c","SmilerSprites.c","simplebackground.c","simplebackgroundmap.c","windowmap.c","GameCharacter.c","GameSprites.c","Snail.c","MazeMap.c","MazeSprites.c","sprites.h"
+            ],
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "options": {
+                "shell": {
+                    "executable": "powershell.exe",
+                    "args": [
+                        "-NoProfile",
+                        "-Command"
+                    ]
+                }
+            }
+        }
+    ]
+}
